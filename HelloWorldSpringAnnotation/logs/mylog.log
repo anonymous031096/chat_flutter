@@ -1,0 +1,236 @@
+2018-01-24 10:47:13.365  WARN 6160 --- [main] org.duc.spring.MainProgram               : Hello
+2018-01-24 10:47:13.367 ERROR 6160 --- [main] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 11:06:27.420  WARN 6384 --- [main] org.duc.spring.MainProgram               : Hello
+2018-01-24 11:06:27.422 ERROR 6384 --- [main] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 11:06:27.423  WARN 6384 --- [main] org.duc.spring.MainProgram               : Xin chao
+2018-01-24 11:06:27.423 ERROR 6384 --- [main] org.duc.spring.MainProgram               : Tam biet
+2018-01-24 11:58:55.734  WARN 6784 --- [Test worker] org.duc.spring.MainProgram               : Hello
+2018-01-24 11:58:55.737 ERROR 6784 --- [Test worker] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 11:58:55.738  WARN 6784 --- [Test worker] org.duc.spring.MainProgram               : Xin chao
+2018-01-24 11:58:55.739 ERROR 6784 --- [Test worker] org.duc.spring.MainProgram               : Tam biet
+2018-01-24 11:59:14.841  WARN 6847 --- [main] org.duc.spring.MainProgram               : Hello
+2018-01-24 11:59:14.842 ERROR 6847 --- [main] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 11:59:14.842  WARN 6847 --- [main] org.duc.spring.MainProgram               : Xin chao
+2018-01-24 11:59:14.842 ERROR 6847 --- [main] org.duc.spring.MainProgram               : Tam biet
+2018-01-24 11:59:46.145  WARN 6883 --- [main] org.duc.spring.MainProgram               : Hello
+2018-01-24 11:59:46.146 ERROR 6883 --- [main] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 11:59:46.146  WARN 6883 --- [main] org.duc.spring.MainProgram               : Xin chao
+2018-01-24 11:59:46.146 ERROR 6883 --- [main] org.duc.spring.MainProgram               : Tam biet
+2018-01-24 12:00:38.915  WARN 6933 --- [main] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:00:38.916 ERROR 6933 --- [main] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:00:38.916  WARN 6933 --- [main] org.duc.spring.MainProgram               : Xin chao
+2018-01-24 12:00:38.917 ERROR 6933 --- [main] org.duc.spring.MainProgram               : Tam biet
+2018-01-24 12:00:38.930 ERROR 6933 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5a63f509] to prepare test instance [org.duc.spring.HelloWorldSpringAnnotationApplicationTests@130161f7]
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.duc.spring.HelloWorldSpringAnnotationApplicationTests': Unsatisfied dependency expressed through field 'language'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.duc.spring.lang.Language' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:586) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:372) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:400) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118) ~[spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:44) ~[spring-boot-test-autoconfigure-2.0.0.M7.jar:2.0.0.M7]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:242) ~[spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206) [.cp/:na]
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.duc.spring.lang.Language' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1504) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1101) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:583) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	... 29 common frames omitted
+
+2018-01-24 12:01:25.802  WARN 6986 --- [main] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:01:25.803 ERROR 6986 --- [main] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:01:25.804  WARN 6986 --- [main] org.duc.spring.MainProgram               : Xin chao
+2018-01-24 12:01:25.804 ERROR 6986 --- [main] org.duc.spring.MainProgram               : Tam biet
+2018-01-24 12:01:25.817 ERROR 6986 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5a63f509] to prepare test instance [org.duc.spring.HelloWorldSpringAnnotationApplicationTests@130161f7]
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.duc.spring.HelloWorldSpringAnnotationApplicationTests': Unsatisfied dependency expressed through field 'language'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.duc.spring.lang.Language' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:586) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:372) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:400) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118) ~[spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:44) ~[spring-boot-test-autoconfigure-2.0.0.M7.jar:2.0.0.M7]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:242) ~[spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206) [.cp/:na]
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.duc.spring.lang.Language' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1504) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1101) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:583) ~[spring-beans-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	... 29 common frames omitted
+
+2018-01-24 12:19:02.104  WARN 7789 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mainProgram': Unsatisfied dependency expressed through field 'language'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.duc.spring.lang.Language' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-01-24 12:19:02.165 ERROR 7789 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field language in org.duc.spring.MainProgram required a bean of type 'org.duc.spring.lang.Language' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.duc.spring.lang.Language' in your configuration.
+
+2018-01-24 12:21:26.285  WARN 7857 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mainProgram': Unsatisfied dependency expressed through field 'language'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.duc.spring.lang.Language' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-01-24 12:21:26.346 ERROR 7857 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field language in org.duc.spring.MainProgram required a bean of type 'org.duc.spring.lang.Language' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.duc.spring.lang.Language' in your configuration.
+
+2018-01-24 12:21:51.763  WARN 7902 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mainProgram': Unsatisfied dependency expressed through field 'language'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.duc.spring.lang.Language' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-01-24 12:21:51.826 ERROR 7902 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field language in org.duc.spring.MainProgram required a bean of type 'org.duc.spring.lang.Language' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.duc.spring.lang.Language' in your configuration.
+
+2018-01-24 12:23:14.923  WARN 7944 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mainProgram': Unsatisfied dependency expressed through field 'language'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.duc.spring.lang.Language' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-01-24 12:23:14.984 ERROR 7944 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field language in org.duc.spring.MainProgram required a bean of type 'org.duc.spring.lang.Language' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.duc.spring.lang.Language' in your configuration.
+
+2018-01-24 12:23:32.761 ERROR 7983 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:792) [spring-boot-2.0.0.M7.jar:2.0.0.M7]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:773) [spring-boot-2.0.0.M7.jar:2.0.0.M7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) [spring-boot-2.0.0.M7.jar:2.0.0.M7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1245) [spring-boot-2.0.0.M7.jar:2.0.0.M7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1233) [spring-boot-2.0.0.M7.jar:2.0.0.M7]
+	at org.duc.spring.MainProgram.main(MainProgram.java:19) [bin/:na]
+Caused by: java.lang.NullPointerException: null
+	at org.duc.spring.MainProgram.run(MainProgram.java:26) [bin/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) [spring-boot-2.0.0.M7.jar:2.0.0.M7]
+	... 5 common frames omitted
+
+2018-01-24 12:25:17.573  WARN 8051 --- [main] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:25:17.575 ERROR 8051 --- [main] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:26:50.464  WARN 8119 --- [main] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:26:50.465 ERROR 8119 --- [main] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:27:21.150  WARN 8196 --- [Test worker] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:27:21.151 ERROR 8196 --- [Test worker] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:28:18.276  WARN 8272 --- [Test worker] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:28:18.278 ERROR 8272 --- [Test worker] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:29:01.682  WARN 8313 --- [main] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:29:01.683 ERROR 8313 --- [main] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:29:19.107  WARN 8344 --- [main] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:29:19.108 ERROR 8344 --- [main] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:29:30.652  WARN 8371 --- [main] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:29:30.653 ERROR 8371 --- [main] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:31:30.822  WARN 8483 --- [Test worker] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:31:30.823 ERROR 8483 --- [Test worker] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:31:43.757  WARN 8541 --- [Test worker] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:31:43.758 ERROR 8541 --- [Test worker] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:32:26.276  WARN 8608 --- [Test worker] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:32:26.277 ERROR 8608 --- [Test worker] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:32:35.455  WARN 8664 --- [Test worker] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:32:35.456 ERROR 8664 --- [Test worker] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:32:56.580  WARN 8703 --- [main] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:32:56.581 ERROR 8703 --- [main] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:34:08.213  WARN 8789 --- [Test worker] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:34:08.216 ERROR 8789 --- [Test worker] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:34:22.388  WARN 8845 --- [Test worker] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:34:22.389 ERROR 8845 --- [Test worker] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:34:35.885  WARN 8908 --- [Test worker] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:34:35.886 ERROR 8908 --- [Test worker] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:35:01.251  WARN 8968 --- [Test worker] org.duc.spring.MainProgram               : Xin chao
+2018-01-24 12:35:01.253 ERROR 8968 --- [Test worker] org.duc.spring.MainProgram               : Tam biet
+2018-01-24 12:35:39.144  WARN 9003 --- [main] org.duc.spring.MainProgram               : Xin chao
+2018-01-24 12:35:39.145 ERROR 9003 --- [main] org.duc.spring.MainProgram               : Tam biet
+2018-01-24 12:35:52.474  WARN 9033 --- [main] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:35:52.475 ERROR 9033 --- [main] org.duc.spring.MainProgram               : Bye bye
+2018-01-24 12:37:04.776 ERROR 9095 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:792) [spring-boot-2.0.0.M7.jar:2.0.0.M7]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:773) [spring-boot-2.0.0.M7.jar:2.0.0.M7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) [spring-boot-2.0.0.M7.jar:2.0.0.M7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1245) [spring-boot-2.0.0.M7.jar:2.0.0.M7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1233) [spring-boot-2.0.0.M7.jar:2.0.0.M7]
+	at org.duc.spring.MainProgram.main(MainProgram.java:19) [bin/:na]
+Caused by: java.lang.NullPointerException: null
+	at org.duc.spring.MainProgram.run(MainProgram.java:26) [bin/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) [spring-boot-2.0.0.M7.jar:2.0.0.M7]
+	... 5 common frames omitted
+
+2018-01-24 12:37:24.931  WARN 9133 --- [main] org.duc.spring.MainProgram               : Hello
+2018-01-24 12:37:24.933 ERROR 9133 --- [main] org.duc.spring.MainProgram               : Bye bye
