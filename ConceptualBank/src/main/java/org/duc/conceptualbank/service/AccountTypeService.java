@@ -2,6 +2,8 @@ package org.duc.conceptualbank.service;
 
 import java.util.List;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.duc.conceptualbank.entity.AccountType;
 import org.duc.conceptualbank.repository.AccountTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AccountTypeService {
+
+	private static final Logger LOGGER = LogManager.getLogger(AccountTypeService.class);
 
 	@Autowired
 	AccountTypeRepository accountTypeRepository;
@@ -20,40 +24,47 @@ public class AccountTypeService {
 		}
 	}
 
-	public AccountType getOne(int accountTypeCode) {
+	public List<AccountType> getAll() {
+		return accountTypeRepository.findAll();
+	}
+
+	public AccountType getById(int accountTypeCode) {
 		return accountTypeRepository.findOne(accountTypeCode);
 	}
 
-	public void add(String accountTypeDescription) {
+	public boolean add(AccountType accountType) {
 		try {
-			AccountType accountType = new AccountType(accountTypeDescription);
 			accountTypeRepository.save(accountType);
-			System.out.println("Add successfully");
+			LOGGER.debug("Add successfully");
+			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
-			System.out.println(e);
+			LOGGER.error(e);
+			return false;
 		}
 	}
 
-	public void edit(int accountTypeCode, String accountTypeDescription) {
+	public boolean edit(AccountType accountType) {
 		try {
-			AccountType accountType = accountTypeRepository.findOne(accountTypeCode);
-			accountType.setAccountTypeDescription(accountTypeDescription);
 			accountTypeRepository.saveAndFlush(accountType);
-			System.out.println("Edit successfully");
+			LOGGER.debug("Edit successfully");
+			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
-			System.out.println(e);
+			LOGGER.error(e);
+			return false;
 		}
 	}
 
-	public void delete(int accountTypeCode) {
+	public boolean delete(int accountTypeCode) {
 		try {
 			accountTypeRepository.delete(accountTypeCode);
-			System.out.println("Delete successfully");
+			LOGGER.debug("Delete successfully");
+			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
-			System.out.println(e);
+			LOGGER.error(e);
+			return false;
 		}
 	}
 }

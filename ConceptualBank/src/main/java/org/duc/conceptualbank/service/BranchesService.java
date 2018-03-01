@@ -5,7 +5,6 @@ import java.util.List;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.duc.conceptualbank.entity.Branches;
-import org.duc.conceptualbank.entity.Cities;
 import org.duc.conceptualbank.repository.BranchesRepository;
 import org.duc.conceptualbank.repository.CitiesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,7 @@ import org.springframework.stereotype.Service;
 public class BranchesService {
 
 	private static final Logger LOGGER = LogManager.getLogger(BranchesService.class);
-	
+
 	@Autowired
 	BranchesRepository branchesReppository;
 
@@ -29,45 +28,47 @@ public class BranchesService {
 		}
 	}
 
-	public Branches getOne(int branchCode) {
+	public List<Branches> getAll(){
+		return branchesReppository.findAll();
+	}
+	public Branches getById(int branchCode) {
 		return branchesReppository.getOne(branchCode);
 	}
 
-	public void add(int cityCode, String headofficeYn, String branchDetails) {
+	public boolean add(Branches branches) {
 		try {
-			Cities cities = citiesReppository.getOne(cityCode);
-			Branches branches = new Branches(cities, headofficeYn, branchDetails);
 			branchesReppository.save(branches);
 			LOGGER.debug("Add successfully");
+			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
 			LOGGER.error(e.getMessage());
+			return false;
 		}
 	}
 
-	public void edit(int branchCode, int cityCode, String headofficeYn, String branchDetails) {
+	public boolean edit(Branches branches) {
 		try {
-			Branches branches = branchesReppository.findOne(branchCode);
-			Cities cities = citiesReppository.findOne(cityCode);
-			branches.setCities(cities);
-			branches.setHeadofficeYn(headofficeYn);
-			branches.setBranchDetails(branchDetails);
 			branchesReppository.saveAndFlush(branches);
 			LOGGER.debug("Edit successfully");
+			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
-			LOGGER.error(e.getMessage());
+			LOGGER.error(e);
+			return false;
 		}
 	}
 
-	public void delete(int branchCode) {
+	public boolean delete(int branchCode) {
 		try {
 			Branches branches = branchesReppository.findOne(branchCode);
 			branchesReppository.delete(branches);
 			LOGGER.debug("Delete successfully");
+			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
-			LOGGER.error(e.getMessage());
+			LOGGER.error(e);
+			return false;
 		}
 	}
 }

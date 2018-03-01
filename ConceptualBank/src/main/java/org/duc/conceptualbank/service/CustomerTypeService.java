@@ -20,40 +20,46 @@ public class CustomerTypeService {
 		}
 	}
 
-	public CustomerType getOne(int customerTypeCode) {
+	public List<CustomerType> getAll(){
+		return customerTypeRepository.findAll();
+	}
+	public CustomerType getById(int customerTypeCode) {
 		return customerTypeRepository.findOne(customerTypeCode);
 	}
 
-	public void add(String customerTypeDescription) {
+	public boolean add(CustomerType customerType) {
 		try {
-			CustomerType customerType = new CustomerType(customerTypeDescription);
 			customerTypeRepository.save(customerType);
 			System.out.println("Add successfully");
+			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println(e);
+			return false;
 		}
 	}
 
-	public void edit(int customerTypeCode, String customerTypeDescription) {
+	public boolean edit(CustomerType customerType) {
 		try {
-			CustomerType customerType = customerTypeRepository.findOne(customerTypeCode);
-			customerType.setCustomerTypeDescription(customerTypeDescription);
 			customerTypeRepository.saveAndFlush(customerType);
 			System.out.println("Edit successfully");
+			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println(e);
+			return false;
 		}
 	}
 
-	public void delete(int customerTypeCode) {
+	public boolean delete(int customerTypeCode) {
 		try {
 			customerTypeRepository.delete(customerTypeCode);
 			System.out.println("Delete successfully");
+			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println(e);
+			return false;
 		}
 	}
 }

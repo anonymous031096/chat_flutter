@@ -32,36 +32,47 @@ public class CitiesService {
 		return citiesReppository.getOne(cityCode);
 	}
 
-	public void add(String cityName) {
-		Cities cities = new Cities(cityName);
+	public List<Cities> getAll() {
+		return citiesReppository.findAll();
+	}
+
+	public Cities getById(int id) {
+		return citiesReppository.getOne(id);
+	}
+
+	public boolean add(Cities cities) {
 		try {
 			citiesReppository.save(cities);
 			LOGGER.debug("Add successfully");
+			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
 			LOGGER.error(e.getMessage());
+			return false;
 		}
 	}
 
-	public void edit(int cityCode, String cityName) {
+	public boolean edit(Cities cities) {
 		try {
-			Cities cities = citiesReppository.getOne(cityCode);
-			cities.setCityName(cityName);
 			citiesReppository.saveAndFlush(cities);
 			LOGGER.debug("Edit successfully");
+			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
 			LOGGER.error(e.getMessage());
+			return false;
 		}
 	}
 
-	public void delete(int cityCode) {
+	public boolean delete(int cityCode) {
 		try {
 			citiesReppository.delete(cityCode);
 			LOGGER.debug("Delete successfully");
+			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
 			LOGGER.error(e.getMessage());
+			return false;
 		}
 	}
 }
