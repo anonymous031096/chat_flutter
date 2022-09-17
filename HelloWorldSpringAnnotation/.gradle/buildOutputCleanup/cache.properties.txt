@@ -1,2 +1,0 @@
-#Wed Jan 24 10:15:37 ICT 2018
-gradle.version=4.2
